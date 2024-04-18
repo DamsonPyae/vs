@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Css jQuery</title>
+  <style type="text/css">
+    
+
+  </style>
+</head>
+<body>
+  <h1>Hi Myanmar</h1>
+  <h2>Hi Thailand</h2>
+  <h3>Hi Indonesia</h3>
+  <h4>Hi Srilanka</h4>
+  <button type="button">Change new color</button>  
+  
+
+
+  <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        // => css(properties, value) function 
+        $('button').click(function(){
+
+          $('h1').css('background-color','red');
+          $('h2').css('background-color','steelblue');
+          $('h3').css('backgroundColor',"green").css("color","white");
+          $('h4').css({
+            'background-color':'blue',
+            'color':'#fff',
+            'font-family':"Arial"
+          });
+
+
+        });
+      });
+
+
+  </script>
+</body>
+</html>

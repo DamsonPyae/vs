@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remove and Empty</title>
+  <style type="text/css">
+    
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>hello heading tag h1</h1>
+    <h2>hello heading tag h2</h2>
+    <h3>hello heading tag h3</h3>
+    <h2>hello heading tag h2</h2>
+    <h1>hello heading tag h1</h1>
+    <span>hello im span tag</span>
+  </div>
+ 
+  <div>
+    <h1>hello heading tag h1</h1>
+    <h2>hello heading tag h2</h2>
+    <h3>hello heading tag h3</h3>
+    <h2 class="heading2">hello heading tag h2</h2>
+    <h1>hello heading tag h1</h1>
+    <span>hello im span tag</span>
+  </div>
+
+
+  <button type="button" id="remove-btn">Remove h2</button>
+  <button type="button" id="detach-btn">Detach h2</button>
+  <button type="button" id="empty-btn">Empty </button>
+  <button type="button" id="add-btn">Add</button>
+   
+    
+
+
+  
+
+  <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //=? remove 
+      $('#remove-btn').click(function(){
+        $('h2').remove();
+      });
+
+      //=> detach
+      $('#detach-btn').click(function(){
+        $('div').detach();
+      });
+
+      //=> empty
+      $('#empty-btn').click(function(){
+        $('div').empty();
+      });
+
+      //=>add
+      // $('#add-btn').click(function(){
+      //   $('h1').css({
+      //     "background-color":"violet",
+      //     "border":"3px dashed red"
+      //   });
+      // });
+
+      // $('#add-btn').click(function(){
+      //   $('h1,h2').css({
+      //     "background-color":"violet",
+      //     "border":"3px dashed red"
+      //   });
+      // });
+
+      // $('#add-btn').click(function(){
+      //   $('h1,.heading2').css({
+      //     "background-color":"violet",
+      //     "border":"3px dashed red"
+      //   });
+      // });
+
+      // $('#add-btn').click(function(){
+      //   $('h1,h2,h3,span').css({
+      //     "background-color":"violet",
+      //     "border":"3px dashed red"
+      //   });
+      // });
+
+      $('h1').add('span').css({
+          "background-color":"violet",
+          "border":"3px dashed red"
+      });
+
+      $('h1').add('span,h3').css({
+          "background-color":"violet",
+          "border":"3px dashed red"
+       });
+
+       $('h1').add('span').add('h3').css({
+          "background-color":"violet",
+          "border":"3px dashed red"
+        });
+     
+
+
+
+    });
+
+  </script>
+</body>
+</html>

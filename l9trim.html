@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> jQuery trim</title>
+  <style type="text/css">
+    body{
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      width: 500px;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Hi Myanmar</h1>
+    <h1>Hi Thailand</h1>
+    <h1>Hi Indonesia</h1>
+    <h1>Hi Srilanka</h1>
+  </div>
+  
+
+
+  <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        const greeting = "welcome to jquery lessons";
+        console.log(greeting);
+
+        let something = "              welcome to jquery lessons     "
+        console.log(something); //             welcome to jquery lessons    
+
+        something = $.trim(something);
+        console.log(something); //welcome to jquery lessons
+
+
+        let welcome = " \n\n             welcome to jquery lessons     \n\n"
+        console.log(welcome); //           welcome to jquery lessons    
+
+        welcome = jQuery.trim(welcome);  // $ = jQuery
+        console.log(welcome);//welcome to jquery lessons
+
+      })
+
+
+
+
+  </script>
+</body>
+</html>

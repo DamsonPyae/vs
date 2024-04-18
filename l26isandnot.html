@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attr and remove attr method</title>
+  <style type="text/css">
+   body{
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: ;
+   }
+
+  </style>
+</head>
+<body>
+    <div class="">
+      <h1>is and not method</h1>
+      <p>This is awesome jquery verison</p>
+      
+    </div>
+
+
+    <div class="container">
+
+      <div class="box square1">
+        <h4>box 1 by h4</h4>
+      </div>
+
+      <div class="box square2">
+        <h3>box 2 by h3</h3>
+      </div>
+
+      <div class="box square3">
+        <h2 class="text-light" >box 3 by h2</h2>
+      </div>
+
+      <div class="box square4">
+        <h3>box 4 by h3</h3>
+      </div>
+
+      <div class="box square5">
+        <h2>box 5 by h2</h2>
+      </div>
+
+
+    </div>
+
+
+  
+
+  <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     
+     //=> is ()
+     $('.container').click(function(){
+      if($('.box').children().is('h3')){
+        $('.box').children('h3').css('background-color','black');
+      }
+     });
+
+     //=> not()
+     $('.container').click(function(){
+      // if($('.box').children().is('h2')){
+      //   $('.box').children('h3').css('background-color','black');
+      // }
+
+      if($('.box').children().is('h2')){
+        $('.box').children('h2').not('.text-light').css('background-color','yellow');
+        
+      }
+     });
+
+
+ 
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attr and remove attr method</title>
+  <style type="text/css">
+    body{
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 0;
+      margin: 0;
+    }
+    .container{
+      width: 800px;
+      background-color: #f4f4f4;
+      padding: 20px;
+
+    }
+    .text-primary{
+      color: blue;
+
+    }
+    .text-light{
+      color: #fff;
+
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-info{
+      background-color: lightskyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <img src="./img/logo1.jpeg" alt="logo1" width="100"/>
+      <h1 id="1">hello 1</h1>
+      <h1 id="2">hello 2</h1>
+      <h1 id="3">hello 3</h1>
+      <h1 id="4">hello 4</h1>
+    </div>
+    
+    <button type="button" id="textpri-btn">text-primary</button>
+    <button type="button" id="bginfo-btn">bg-info</button>
+    <button type="button" id="txtbg-btn">textbg</button>
+    <button type="button" id="multiattr-btn">mutlitattr</button>
+    <button type="button" id="rmattr-btn">remove attr</button>
+    <button type="button" id="txtcnt-btn">text center</button>
+
+    <button type="button" id="hasClass-btn">has class</button>
+    <button type="button" id="toggleClass-btn">toggleClass</button>
+  </div> 
+    
+
+
+  
+
+  <script src="./jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     
+      //=> attr (attribute,value)
+     $('#textpri-btn').click(function(){
+      $('h1').attr("class","text-primary");
+     });
+
+     $('#bginfo-btn').click(function(){
+      $('h1').attr("class","text-info");
+     });
+
+     $('#txtbg-btn').click(function(){
+      $('h1').attr("class","text-light text-info");
+     });
+
+     $('#multiattr-btn').click(function(){
+      $('img').attr({
+        src:"./img/logo2.jpeg",
+        alt:"logo2",
+        "width":"200",
+        "title":"this is logo 2",
+        "abc":"this is test"
+
+      });
+     });
+
+     $('#rmattr-btn').click(function(){
+      $('h1').removeAttr("class","text-light text-info")
+     });
+
+     $('#rmattr-btn').click(function(){
+      $('h1').removeAttr("class")
+     });
+
+     $('#rmattr-btn').click(function(){
+      $('h1').removeAttr("class id")
+     });
+     $('#rmattr-btn').click(function(){
+      $('h1').removeAttr(" id class")
+     });
+
+
+     $('#txtcnt-btn').click(function(){
+      // $('h1').attr("class","text-center");
+      $('h1').addClass("text-center");
+     });
+
+     $('#hasClass-btn').click(function(){
+      alert($('h1').hasClass('text-light'));
+     });
+
+     $('#toggleClass-btn').click(function(){
+      $('h1').toggleClass('text-center');
+     });
+
+
+     
+
+
+
+
+    });
+
+  </script>
+</body>
+</html>
